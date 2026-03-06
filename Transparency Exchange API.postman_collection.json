@@ -1,0 +1,2679 @@
+{
+  "info": {
+    "_postman_id": "09ea8b97-965f-45a8-bb93-1ea7da5f71d7",
+    "name": "Transparency Exchange API",
+    "description": "TBC\n\nContact Support:\n Name: TEA Working Group\n Email: tbc@somewhere.tld",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16609814"
+  },
+  "item": [
+    {
+      "name": "product",
+      "item": [
+        {
+          "name": "{uuid}",
+          "item": [
+            {
+              "name": "releases",
+              "item": [
+                {
+                  "name": "get Releases By Product Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/product/:uuid/releases?pageOffset=0&pageSize=100",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "product",
+                        ":uuid",
+                        "releases"
+                      ],
+                      "query": [
+                        {
+                          "key": "pageOffset",
+                          "value": "0",
+                          "description": "Pagination offset"
+                        },
+                        {
+                          "key": "pageSize",
+                          "value": "100",
+                          "description": "Pagination offset"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Product in the TEA server"
+                        }
+                      ]
+                    },
+                    "description": "Get releases of the product"
+                  },
+                  "response": [
+                    {
+                      "name": "A paginated response containing TEA Product Releases",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/product/:uuid/releases?pageOffset=0&pageSize=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "product",
+                            ":uuid",
+                            "releases"
+                          ],
+                          "query": [
+                            {
+                              "description": "Pagination offset",
+                              "key": "pageOffset",
+                              "value": "0"
+                            },
+                            {
+                              "description": "Pagination offset",
+                              "key": "pageSize",
+                              "value": "100"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"timestamp\": \"2024-03-20T15:30:00Z\",\n  \"pageStartIndex\": 0,\n  \"pageSize\": 100,\n  \"totalResults\": 130,\n  \"results\": [\n    {\n      \"uuid\": \"98923ba1-327b-ef14-deff-aeb6c9d3f83d\",\n      \"version\": \"2.24.3\",\n      \"createdDate\": \"2024-03-20T15:30:00Z\",\n      \"components\": [\n        {\n          \"uuid\": \"2eb77a80-45ab-20ca-b7b3-c92965a5064b\",\n          \"release\": \"0a15d727-dea5-8303-f8c5-6d1b65b4303e\"\n        },\n        {\n          \"uuid\": \"200f16f9-ba01-2681-ac64-b4b1734e227e\",\n          \"release\": \"52a5a065-174b-2a21-a395-ebc9fc2f4959\"\n        }\n      ],\n      \"product\": \"b3135125-c126-fb91-61d3-0cba7da7395d\",\n      \"productName\": \"Apache Log4j 2\",\n      \"releaseDate\": \"2024-03-20T15:30:00Z\",\n      \"preRelease\": false,\n      \"identifiers\": [\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"PURL\",\n          \"idValue\": \"string\"\n        }\n      ]\n    },\n    {\n      \"uuid\": \"461066de-43cf-e503-c377-5c3d3e532382\",\n      \"version\": \"2.24.3\",\n      \"createdDate\": \"2024-03-20T15:30:00Z\",\n      \"components\": [\n        {\n          \"uuid\": \"3698dc8a-532b-129e-0bef-9103f4c579f2\",\n          \"release\": \"43704bc9-c175-5d06-c65e-677b2b507d35\"\n        },\n        {\n          \"uuid\": \"cd4f7c14-8a29-6c78-825b-e35b76229733\",\n          \"release\": \"f9dcbf53-97fe-aa29-49fc-499e847bb1bd\"\n        }\n      ],\n      \"product\": \"1b4d69fa-3f6d-3766-bdc6-69d3ec9613e0\",\n      \"productName\": \"Apache Log4j 2\",\n      \"releaseDate\": \"2024-03-20T15:30:00Z\",\n      \"preRelease\": true,\n      \"identifiers\": [\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        }\n      ]\n    }\n  ]\n}"
+                    },
+                    {
+                      "name": "Object requested by identifier not found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/product/:uuid/releases?pageOffset=0&pageSize=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "product",
+                            ":uuid",
+                            "releases"
+                          ],
+                          "query": [
+                            {
+                              "description": "Pagination offset",
+                              "key": "pageOffset",
+                              "value": "0"
+                            },
+                            {
+                              "description": "Pagination offset",
+                              "key": "pageSize",
+                              "value": "100"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "cle",
+              "item": [
+                {
+                  "name": "get Cle By Product Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/product/:uuid/cle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "product",
+                        ":uuid",
+                        "cle"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Product in the TEA server"
+                        }
+                      ]
+                    },
+                    "description": "Get the CLE (Common Lifecycle Enumeration) data for a TEA Product"
+                  },
+                  "response": [
+                    {
+                      "name": "CLE data for the requested TEA Product found and returned",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/product/:uuid/cle",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "product",
+                            ":uuid",
+                            "cle"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"events\": [\n    {\n      \"id\": 5208,\n      \"type\": \"withdrawn\",\n      \"effective\": \"2020-09-18T19:15:31.265Z\",\n      \"published\": \"1981-11-15T04:09:21.277Z\",\n      \"version\": \"string\",\n      \"versions\": [\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        },\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        }\n      ],\n      \"supportId\": \"string\",\n      \"license\": \"string\",\n      \"supersededByVersion\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"PURL\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        }\n      ],\n      \"eventId\": 1876,\n      \"reason\": \"string\",\n      \"description\": \"string\",\n      \"references\": [\n        \"http://qQLeSCYIPtLunuaiLMsxNdnpRwYPGz.sjiwbz\",\n        \"http://RSioBDvfmnbCZjHLswVgDwM.qghtC-z9EX5-\"\n      ]\n    },\n    {\n      \"id\": 8980,\n      \"type\": \"released\",\n      \"effective\": \"2001-01-23T21:11:30.442Z\",\n      \"published\": \"1964-10-30T10:48:58.731Z\",\n      \"version\": \"string\",\n      \"versions\": [\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        },\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        }\n      ],\n      \"supportId\": \"string\",\n      \"license\": \"string\",\n      \"supersededByVersion\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        }\n      ],\n      \"eventId\": 5746,\n      \"reason\": \"string\",\n      \"description\": \"string\",\n      \"references\": [\n        \"https://uBNBdJHUJeLIMdFQuGXFrH.jxZeT7Rq0yNdgBKV6X2b2nOsnRl4pD6A-Zl1w,h,uKGi\",\n        \"https://dluShQrdFqQSVdDHIA.vhsce2VyXQoB+mBBcpGj\"\n      ]\n    }\n  ],\n  \"definitions\": {\n    \"type\": \"object\",\n    \"description\": \"Container for reusable CLE policy definitions\",\n    \"properties\": {\n      \"support\": {\n        \"type\": \"array\",\n        \"description\": \"List of support policies\",\n        \"items\": {\n          \"type\": \"object\",\n          \"description\": \"A support policy definition from CLE\",\n          \"properties\": {\n            \"id\": {\n              \"type\": \"string\",\n              \"description\": \"Unique identifier for the support policy\"\n            },\n            \"description\": {\n              \"type\": \"string\",\n              \"description\": \"Human-readable description of the policy\"\n            },\n            \"url\": {\n              \"type\": \"string\",\n              \"format\": \"uri\",\n              \"description\": \"URL to detailed documentation about this support policy\"\n            }\n          },\n          \"required\": [\n            \"id\",\n            \"description\"\n          ],\n          \"examples\": [\n            {\n              \"id\": \"http://json-schema.org/standard#\",\n              \"description\": \"Standard product support policy\",\n              \"url\": \"https://example.com/support/standard\"\n            }\n          ]\n        }\n      }\n    }\n  }\n}"
+                    },
+                    {
+                      "name": "Object requested by identifier not found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/product/:uuid/cle",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "product",
+                            ":uuid",
+                            "cle"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "get Tea Product By Uuid",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/product/:uuid",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "product",
+                    ":uuid"
+                  ],
+                  "variable": [
+                    {
+                      "key": "uuid",
+                      "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                      "description": "UUID of the TEA product in the TEA server"
+                    }
+                  ]
+                },
+                "description": "Get a TEA Product by UUID"
+              },
+              "response": [
+                {
+                  "name": "Requested TEA Product found and returned",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/product/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "product",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of the TEA product in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"uuid\": \"471c8d67-875d-324c-f181-35293904fb96\",\n  \"name\": \"string\",\n  \"identifiers\": [\n    {\n      \"idType\": \"PURL\",\n      \"idValue\": \"string\"\n    },\n    {\n      \"idType\": \"PURL\",\n      \"idValue\": \"string\"\n    }\n  ]\n}"
+                },
+                {
+                  "name": "Object requested by identifier not found",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/product/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "product",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of the TEA product in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "productRelease",
+      "item": [
+        {
+          "name": "{uuid}",
+          "item": [
+            {
+              "name": "cle",
+              "item": [
+                {
+                  "name": "get Cle By Product Release Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/productRelease/:uuid/cle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "productRelease",
+                        ":uuid",
+                        "cle"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Product Release in the TEA server"
+                        }
+                      ]
+                    },
+                    "description": "Get the CLE (Common Lifecycle Enumeration) data for a TEA Product Release"
+                  },
+                  "response": [
+                    {
+                      "name": "CLE data for the requested TEA Product Release found and returned",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/productRelease/:uuid/cle",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "productRelease",
+                            ":uuid",
+                            "cle"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product Release in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"events\": [\n    {\n      \"id\": 5208,\n      \"type\": \"withdrawn\",\n      \"effective\": \"2020-09-18T19:15:31.265Z\",\n      \"published\": \"1981-11-15T04:09:21.277Z\",\n      \"version\": \"string\",\n      \"versions\": [\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        },\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        }\n      ],\n      \"supportId\": \"string\",\n      \"license\": \"string\",\n      \"supersededByVersion\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"PURL\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        }\n      ],\n      \"eventId\": 1876,\n      \"reason\": \"string\",\n      \"description\": \"string\",\n      \"references\": [\n        \"http://qQLeSCYIPtLunuaiLMsxNdnpRwYPGz.sjiwbz\",\n        \"http://RSioBDvfmnbCZjHLswVgDwM.qghtC-z9EX5-\"\n      ]\n    },\n    {\n      \"id\": 8980,\n      \"type\": \"released\",\n      \"effective\": \"2001-01-23T21:11:30.442Z\",\n      \"published\": \"1964-10-30T10:48:58.731Z\",\n      \"version\": \"string\",\n      \"versions\": [\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        },\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        }\n      ],\n      \"supportId\": \"string\",\n      \"license\": \"string\",\n      \"supersededByVersion\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        }\n      ],\n      \"eventId\": 5746,\n      \"reason\": \"string\",\n      \"description\": \"string\",\n      \"references\": [\n        \"https://uBNBdJHUJeLIMdFQuGXFrH.jxZeT7Rq0yNdgBKV6X2b2nOsnRl4pD6A-Zl1w,h,uKGi\",\n        \"https://dluShQrdFqQSVdDHIA.vhsce2VyXQoB+mBBcpGj\"\n      ]\n    }\n  ],\n  \"definitions\": {\n    \"type\": \"object\",\n    \"description\": \"Container for reusable CLE policy definitions\",\n    \"properties\": {\n      \"support\": {\n        \"type\": \"array\",\n        \"description\": \"List of support policies\",\n        \"items\": {\n          \"type\": \"object\",\n          \"description\": \"A support policy definition from CLE\",\n          \"properties\": {\n            \"id\": {\n              \"type\": \"string\",\n              \"description\": \"Unique identifier for the support policy\"\n            },\n            \"description\": {\n              \"type\": \"string\",\n              \"description\": \"Human-readable description of the policy\"\n            },\n            \"url\": {\n              \"type\": \"string\",\n              \"format\": \"uri\",\n              \"description\": \"URL to detailed documentation about this support policy\"\n            }\n          },\n          \"required\": [\n            \"id\",\n            \"description\"\n          ],\n          \"examples\": [\n            {\n              \"id\": \"http://json-schema.org/standard#\",\n              \"description\": \"Standard product support policy\",\n              \"url\": \"https://example.com/support/standard\"\n            }\n          ]\n        }\n      }\n    }\n  }\n}"
+                    },
+                    {
+                      "name": "Object requested by identifier not found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/productRelease/:uuid/cle",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "productRelease",
+                            ":uuid",
+                            "cle"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product Release in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "collection",
+              "item": [
+                {
+                  "name": "latest",
+                  "item": [
+                    {
+                      "name": "get Latest Collection For Product Release",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/productRelease/:uuid/collection/latest",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "productRelease",
+                            ":uuid",
+                            "collection",
+                            "latest"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product Release in the TEA server"
+                            }
+                          ]
+                        },
+                        "description": "Get the latest TEA Collection belonging to the TEA Product Release"
+                      },
+                      "response": [
+                        {
+                          "name": "Requested TEA Collection found and returned",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/productRelease/:uuid/collection/latest",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "productRelease",
+                                ":uuid",
+                                "collection",
+                                "latest"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "uuid",
+                                  "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                                  "description": "UUID of TEA Product Release in the TEA server"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"uuid\": \"41ea7c4e-7196-191c-e425-fa851cc89d6f\",\n  \"version\": 199,\n  \"date\": \"2024-03-20T15:30:00Z\",\n  \"belongsTo\": \"PRODUCT_RELEASE\",\n  \"updateReason\": {\n    \"type\": \"ARTIFACT_UPDATED\",\n    \"comment\": \"string\"\n  },\n  \"artifacts\": [\n    {\n      \"uuid\": \"43891fb8-68ba-fa56-eb65-7c0d845250cc\",\n      \"type\": \"OTHER\",\n      \"formats\": [\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"BLAKE2b-512\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA-1\",\n              \"algValue\": \"string\"\n            }\n          ]\n        },\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"SHA-1\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"BLAKE2b-384\",\n              \"algValue\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"name\": \"string\",\n      \"distributionIds\": [\n        \"bcaf8fba-4243-9333-8101-700fdf069a10\",\n        \"29539118-4881-ceb2-410e-11e6f2590d6d\"\n      ]\n    },\n    {\n      \"uuid\": \"94049c89-0ab4-84c0-5805-fa9d60166725\",\n      \"type\": \"FORMULATION\",\n      \"formats\": [\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"BLAKE2b-384\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA-384\",\n              \"algValue\": \"string\"\n            }\n          ]\n        },\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"SHA-512\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA3-256\",\n              \"algValue\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"name\": \"string\",\n      \"distributionIds\": [\n        \"47d90f01-1c93-e015-39c8-e8bddddbcf84\",\n        \"6ba5f3e9-a247-f596-9092-b7492a94935d\"\n      ]\n    }\n  ]\n}"
+                        },
+                        {
+                          "name": "Object requested by identifier not found",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/productRelease/:uuid/collection/latest",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "productRelease",
+                                ":uuid",
+                                "collection",
+                                "latest"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "uuid",
+                                  "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                                  "description": "UUID of TEA Product Release in the TEA server"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "{collectionVersion}",
+                  "item": [
+                    {
+                      "name": "get Collection For Product Release",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/productRelease/:uuid/collection/:collectionVersion",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "productRelease",
+                            ":uuid",
+                            "collection",
+                            ":collectionVersion"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product Release in the TEA server"
+                            },
+                            {
+                              "key": "collectionVersion",
+                              "value": "3532",
+                              "description": "Version of TEA Collection"
+                            }
+                          ]
+                        },
+                        "description": "Get a specific Collection (by version) for a TEA Product Release by its UUID"
+                      },
+                      "response": [
+                        {
+                          "name": "Requested TEA Collection Version found and returned",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/productRelease/:uuid/collection/:collectionVersion",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "productRelease",
+                                ":uuid",
+                                "collection",
+                                ":collectionVersion"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "uuid",
+                                  "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                                  "description": "UUID of TEA Product Release in the TEA server"
+                                },
+                                {
+                                  "key": "collectionVersion",
+                                  "value": "3532",
+                                  "description": "Version of TEA Collection"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"uuid\": \"41ea7c4e-7196-191c-e425-fa851cc89d6f\",\n  \"version\": 199,\n  \"date\": \"2024-03-20T15:30:00Z\",\n  \"belongsTo\": \"PRODUCT_RELEASE\",\n  \"updateReason\": {\n    \"type\": \"ARTIFACT_UPDATED\",\n    \"comment\": \"string\"\n  },\n  \"artifacts\": [\n    {\n      \"uuid\": \"43891fb8-68ba-fa56-eb65-7c0d845250cc\",\n      \"type\": \"OTHER\",\n      \"formats\": [\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"BLAKE2b-512\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA-1\",\n              \"algValue\": \"string\"\n            }\n          ]\n        },\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"SHA-1\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"BLAKE2b-384\",\n              \"algValue\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"name\": \"string\",\n      \"distributionIds\": [\n        \"bcaf8fba-4243-9333-8101-700fdf069a10\",\n        \"29539118-4881-ceb2-410e-11e6f2590d6d\"\n      ]\n    },\n    {\n      \"uuid\": \"94049c89-0ab4-84c0-5805-fa9d60166725\",\n      \"type\": \"FORMULATION\",\n      \"formats\": [\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"BLAKE2b-384\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA-384\",\n              \"algValue\": \"string\"\n            }\n          ]\n        },\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"SHA-512\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA3-256\",\n              \"algValue\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"name\": \"string\",\n      \"distributionIds\": [\n        \"47d90f01-1c93-e015-39c8-e8bddddbcf84\",\n        \"6ba5f3e9-a247-f596-9092-b7492a94935d\"\n      ]\n    }\n  ]\n}"
+                        },
+                        {
+                          "name": "Object requested by identifier not found",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/productRelease/:uuid/collection/:collectionVersion",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "productRelease",
+                                ":uuid",
+                                "collection",
+                                ":collectionVersion"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "uuid",
+                                  "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                                  "description": "UUID of TEA Product Release in the TEA server"
+                                },
+                                {
+                                  "key": "collectionVersion",
+                                  "value": "3532",
+                                  "description": "Version of TEA Collection"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "collections",
+              "item": [
+                {
+                  "name": "get Collections By Product Release Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/productRelease/:uuid/collections",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "productRelease",
+                        ":uuid",
+                        "collections"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Product Release in the TEA server"
+                        }
+                      ]
+                    },
+                    "description": "Get the TEA Collections belonging to the TEA Product Release"
+                  },
+                  "response": [
+                    {
+                      "name": "Requested TEA Collection found and returned",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/productRelease/:uuid/collections",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "productRelease",
+                            ":uuid",
+                            "collections"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product Release in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"uuid\": \"66331f1c-c6b4-5273-06a6-094b5fdaf849\",\n    \"version\": 8302,\n    \"date\": \"2024-03-20T15:30:00Z\",\n    \"belongsTo\": \"PRODUCT_RELEASE\",\n    \"updateReason\": {\n      \"type\": \"INITIAL_RELEASE\",\n      \"comment\": \"string\"\n    },\n    \"artifacts\": [\n      {\n        \"uuid\": \"4d9edfc9-afe0-4fe1-2c75-3fffae077cb9\",\n        \"type\": \"SECURITY_TXT\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-256\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE2b-256\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-384\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"SHA-1\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"d401f84e-4417-3bab-11ee-64d4cde2fc1f\",\n          \"16797af6-1a11-8cb2-fbc8-61c0adbfe3ad\"\n        ]\n      },\n      {\n        \"uuid\": \"4f73ed0b-982e-a09f-7bf7-77937ca162dc\",\n        \"type\": \"FORMULATION\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA3-512\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"SHA-384\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-384\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE3\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"25ffac8d-892b-6b69-937b-4543130ebc6d\",\n          \"d1b1f565-9a21-60e2-67ef-67cc530fc944\"\n        ]\n      }\n    ]\n  },\n  {\n    \"uuid\": \"18db2273-15f2-ddad-0a15-b81f648dac10\",\n    \"version\": 9545,\n    \"date\": \"2024-03-20T15:30:00Z\",\n    \"belongsTo\": \"PRODUCT_RELEASE\",\n    \"updateReason\": {\n      \"type\": \"INITIAL_RELEASE\",\n      \"comment\": \"string\"\n    },\n    \"artifacts\": [\n      {\n        \"uuid\": \"14e08fc8-0422-ce3e-f2fd-fd3250299cfa\",\n        \"type\": \"BOM\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA3-384\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE2b-512\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-1\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"SHA-256\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"a451ee7c-60c9-74fb-f113-1f2ac5dfb7de\",\n          \"8e0997c0-f9bf-d534-2dcb-91b69b33cf01\"\n        ]\n      },\n      {\n        \"uuid\": \"6c9054c7-b661-de59-4a5a-bd6fb923769c\",\n        \"type\": \"CERTIFICATION\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-512\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"MD5\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-512\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE2b-384\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"99ccc079-9001-4d38-7f89-1d22a335e8eb\",\n          \"1867f231-5fbf-fa14-cc88-516559c9b27d\"\n        ]\n      }\n    ]\n  }\n]"
+                    },
+                    {
+                      "name": "Object requested by identifier not found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/productRelease/:uuid/collections",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "productRelease",
+                            ":uuid",
+                            "collections"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Product Release in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "get Tea Product Release By Uuid",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/productRelease/:uuid",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "productRelease",
+                    ":uuid"
+                  ],
+                  "variable": [
+                    {
+                      "key": "uuid",
+                      "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                      "description": "UUID of TEA Product Release in the TEA server"
+                    }
+                  ]
+                },
+                "description": "Get a TEA Product Release"
+              },
+              "response": [
+                {
+                  "name": "Requested TEA Product Release found and returned",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/productRelease/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "productRelease",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Product Release in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"uuid\": \"19f534ee-274f-f331-7bb3-402d58388b3a\",\n  \"version\": \"2.24.3\",\n  \"createdDate\": \"2024-03-20T15:30:00Z\",\n  \"components\": [\n    {\n      \"uuid\": \"abca9337-5293-06dd-d202-a57dc0f90d67\",\n      \"release\": \"9e739d44-451c-dbad-1653-687ab6c4744b\"\n    },\n    {\n      \"uuid\": \"f5309b05-3efa-2a66-8292-fa1909b9f8fa\",\n      \"release\": \"c5b3fb88-c04b-b395-c1ed-4b73b3c361d3\"\n    }\n  ],\n  \"product\": \"260facf9-5430-ef25-3644-ec5500b08b62\",\n  \"productName\": \"Apache Log4j 2\",\n  \"releaseDate\": \"2024-03-20T15:30:00Z\",\n  \"preRelease\": true,\n  \"identifiers\": [\n    {\n      \"idType\": \"TEI\",\n      \"idValue\": \"string\"\n    },\n    {\n      \"idType\": \"CPE\",\n      \"idValue\": \"string\"\n    }\n  ]\n}"
+                },
+                {
+                  "name": "Object requested by identifier not found",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/productRelease/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "productRelease",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Product Release in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "productReleases",
+      "item": [
+        {
+          "name": "query Tea Product Releases",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/productReleases?pageOffset=0&pageSize=100&idType=PURL&idValue=string",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "productReleases"
+              ],
+              "query": [
+                {
+                  "key": "pageOffset",
+                  "value": "0",
+                  "description": "Pagination offset"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "100",
+                  "description": "Pagination offset"
+                },
+                {
+                  "key": "idType",
+                  "value": "PURL",
+                  "description": "Type of identifier specified in the `idValue` parameter"
+                },
+                {
+                  "key": "idValue",
+                  "value": "string",
+                  "description": "If present, only the objects with the given identifier value will be returned."
+                }
+              ]
+            },
+            "description": "Returns a list of TEA product releases. Note that multiple product releases may match."
+          },
+          "response": [
+            {
+              "name": "A paginated response containing TEA Product Releases",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/productReleases?pageOffset=0&pageSize=100&idType=PURL&idValue=string",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "productReleases"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination offset",
+                      "key": "pageOffset",
+                      "value": "0"
+                    },
+                    {
+                      "description": "Pagination offset",
+                      "key": "pageSize",
+                      "value": "100"
+                    },
+                    {
+                      "description": "Type of identifier specified in the `idValue` parameter",
+                      "key": "idType",
+                      "value": "PURL"
+                    },
+                    {
+                      "description": "If present, only the objects with the given identifier value will be returned.",
+                      "key": "idValue",
+                      "value": "string"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"timestamp\": \"2024-03-20T15:30:00Z\",\n  \"pageStartIndex\": 0,\n  \"pageSize\": 100,\n  \"totalResults\": 130,\n  \"results\": [\n    {\n      \"uuid\": \"98923ba1-327b-ef14-deff-aeb6c9d3f83d\",\n      \"version\": \"2.24.3\",\n      \"createdDate\": \"2024-03-20T15:30:00Z\",\n      \"components\": [\n        {\n          \"uuid\": \"2eb77a80-45ab-20ca-b7b3-c92965a5064b\",\n          \"release\": \"0a15d727-dea5-8303-f8c5-6d1b65b4303e\"\n        },\n        {\n          \"uuid\": \"200f16f9-ba01-2681-ac64-b4b1734e227e\",\n          \"release\": \"52a5a065-174b-2a21-a395-ebc9fc2f4959\"\n        }\n      ],\n      \"product\": \"b3135125-c126-fb91-61d3-0cba7da7395d\",\n      \"productName\": \"Apache Log4j 2\",\n      \"releaseDate\": \"2024-03-20T15:30:00Z\",\n      \"preRelease\": false,\n      \"identifiers\": [\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"PURL\",\n          \"idValue\": \"string\"\n        }\n      ]\n    },\n    {\n      \"uuid\": \"461066de-43cf-e503-c377-5c3d3e532382\",\n      \"version\": \"2.24.3\",\n      \"createdDate\": \"2024-03-20T15:30:00Z\",\n      \"components\": [\n        {\n          \"uuid\": \"3698dc8a-532b-129e-0bef-9103f4c579f2\",\n          \"release\": \"43704bc9-c175-5d06-c65e-677b2b507d35\"\n        },\n        {\n          \"uuid\": \"cd4f7c14-8a29-6c78-825b-e35b76229733\",\n          \"release\": \"f9dcbf53-97fe-aa29-49fc-499e847bb1bd\"\n        }\n      ],\n      \"product\": \"1b4d69fa-3f6d-3766-bdc6-69d3ec9613e0\",\n      \"productName\": \"Apache Log4j 2\",\n      \"releaseDate\": \"2024-03-20T15:30:00Z\",\n      \"preRelease\": true,\n      \"identifiers\": [\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        }\n      ]\n    }\n  ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "query Tea Products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/products?pageOffset=0&pageSize=100&idType=PURL&idValue=string",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "pageOffset",
+                  "value": "0",
+                  "description": "Pagination offset"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "100",
+                  "description": "Pagination offset"
+                },
+                {
+                  "key": "idType",
+                  "value": "PURL",
+                  "description": "Type of identifier specified in the `idValue` parameter"
+                },
+                {
+                  "key": "idValue",
+                  "value": "string",
+                  "description": "If present, only the objects with the given identifier value will be returned."
+                }
+              ]
+            },
+            "description": "Returns a list of TEA products. Note that multiple products may match."
+          },
+          "response": [
+            {
+              "name": "A paginated response containing TEA Products",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/products?pageOffset=0&pageSize=100&idType=PURL&idValue=string",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination offset",
+                      "key": "pageOffset",
+                      "value": "0"
+                    },
+                    {
+                      "description": "Pagination offset",
+                      "key": "pageSize",
+                      "value": "100"
+                    },
+                    {
+                      "description": "Type of identifier specified in the `idValue` parameter",
+                      "key": "idType",
+                      "value": "PURL"
+                    },
+                    {
+                      "description": "If present, only the objects with the given identifier value will be returned.",
+                      "key": "idValue",
+                      "value": "string"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"timestamp\": \"2024-03-20T15:30:00Z\",\n  \"pageStartIndex\": 0,\n  \"pageSize\": 100,\n  \"totalResults\": 3318,\n  \"results\": [\n    {\n      \"uuid\": \"dbf50848-d263-c53d-6bee-31a6ea2567ad\",\n      \"name\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"PURL\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        }\n      ]\n    },\n    {\n      \"uuid\": \"b2ff9487-abd4-61c5-90ea-2070bb9023f8\",\n      \"name\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        }\n      ]\n    }\n  ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "item": [
+        {
+          "name": "{uuid}",
+          "item": [
+            {
+              "name": "releases",
+              "item": [
+                {
+                  "name": "get Releases By Component Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/component/:uuid/releases",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "component",
+                        ":uuid",
+                        "releases"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Component in the TEA server"
+                        }
+                      ]
+                    },
+                    "description": "Get releases of the component"
+                  },
+                  "response": [
+                    {
+                      "name": "Requested Releases of TEA Component found and returned",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/component/:uuid/releases",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "component",
+                            ":uuid",
+                            "releases"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Component in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"uuid\": \"473b50ac-169c-23f5-5f01-542f64bce724\",\n    \"version\": \"1.2.3\",\n    \"createdDate\": \"2024-03-20T15:30:00Z\",\n    \"component\": \"0297ce4b-e998-8fc0-5ad0-aa15ba0b6664\",\n    \"componentName\": \"tomcat\",\n    \"releaseDate\": \"2024-03-20T15:30:00Z\",\n    \"preRelease\": true,\n    \"identifiers\": [\n      {\n        \"idType\": \"TEI\",\n        \"idValue\": \"string\"\n      },\n      {\n        \"idType\": \"CPE\",\n        \"idValue\": \"string\"\n      }\n    ],\n    \"distributions\": [\n      {\n        \"distributionId\": \"816b175c-c8a9-f513-1c70-aaf9579ab6da\",\n        \"description\": \"string\",\n        \"identifiers\": [\n          {\n            \"idType\": \"CPE\",\n            \"idValue\": \"string\"\n          },\n          {\n            \"idType\": \"PURL\",\n            \"idValue\": \"string\"\n          }\n        ],\n        \"url\": \"string\",\n        \"signatureUrl\": \"string\",\n        \"checksums\": [\n          {\n            \"algType\": \"SHA3-384\",\n            \"algValue\": \"string\"\n          },\n          {\n            \"algType\": \"SHA-512\",\n            \"algValue\": \"string\"\n          }\n        ]\n      },\n      {\n        \"distributionId\": \"63c5c292-7ccf-bec8-7749-f1c8851d998a\",\n        \"description\": \"string\",\n        \"identifiers\": [\n          {\n            \"idType\": \"PURL\",\n            \"idValue\": \"string\"\n          },\n          {\n            \"idType\": \"CPE\",\n            \"idValue\": \"string\"\n          }\n        ],\n        \"url\": \"string\",\n        \"signatureUrl\": \"string\",\n        \"checksums\": [\n          {\n            \"algType\": \"SHA3-512\",\n            \"algValue\": \"string\"\n          },\n          {\n            \"algType\": \"MD5\",\n            \"algValue\": \"string\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"uuid\": \"b9e24896-492e-0362-e639-c169aa31d60e\",\n    \"version\": \"1.2.3\",\n    \"createdDate\": \"2024-03-20T15:30:00Z\",\n    \"component\": \"5183ccb8-b77f-6367-5a0d-c99d656b58ed\",\n    \"componentName\": \"tomcat\",\n    \"releaseDate\": \"2024-03-20T15:30:00Z\",\n    \"preRelease\": true,\n    \"identifiers\": [\n      {\n        \"idType\": \"TEI\",\n        \"idValue\": \"string\"\n      },\n      {\n        \"idType\": \"CPE\",\n        \"idValue\": \"string\"\n      }\n    ],\n    \"distributions\": [\n      {\n        \"distributionId\": \"e6cf48ba-198d-ce2e-e5c9-a1d3b5013502\",\n        \"description\": \"string\",\n        \"identifiers\": [\n          {\n            \"idType\": \"PURL\",\n            \"idValue\": \"string\"\n          },\n          {\n            \"idType\": \"TEI\",\n            \"idValue\": \"string\"\n          }\n        ],\n        \"url\": \"string\",\n        \"signatureUrl\": \"string\",\n        \"checksums\": [\n          {\n            \"algType\": \"SHA-384\",\n            \"algValue\": \"string\"\n          },\n          {\n            \"algType\": \"SHA3-384\",\n            \"algValue\": \"string\"\n          }\n        ]\n      },\n      {\n        \"distributionId\": \"049d6ceb-2d7e-2804-b696-d6e8757c88ec\",\n        \"description\": \"string\",\n        \"identifiers\": [\n          {\n            \"idType\": \"PURL\",\n            \"idValue\": \"string\"\n          },\n          {\n            \"idType\": \"TEI\",\n            \"idValue\": \"string\"\n          }\n        ],\n        \"url\": \"string\",\n        \"signatureUrl\": \"string\",\n        \"checksums\": [\n          {\n            \"algType\": \"SHA-384\",\n            \"algValue\": \"string\"\n          },\n          {\n            \"algType\": \"SHA3-512\",\n            \"algValue\": \"string\"\n          }\n        ]\n      }\n    ]\n  }\n]"
+                    },
+                    {
+                      "name": "Object requested by identifier not found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/component/:uuid/releases",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "component",
+                            ":uuid",
+                            "releases"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Component in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "cle",
+              "item": [
+                {
+                  "name": "get Cle By Component Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/component/:uuid/cle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "component",
+                        ":uuid",
+                        "cle"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Component in the TEA server"
+                        }
+                      ]
+                    },
+                    "description": "Get the CLE (Common Lifecycle Enumeration) data for a TEA Component"
+                  },
+                  "response": [
+                    {
+                      "name": "CLE data for the requested TEA Component found and returned",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/component/:uuid/cle",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "component",
+                            ":uuid",
+                            "cle"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Component in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"events\": [\n    {\n      \"id\": 5208,\n      \"type\": \"withdrawn\",\n      \"effective\": \"2020-09-18T19:15:31.265Z\",\n      \"published\": \"1981-11-15T04:09:21.277Z\",\n      \"version\": \"string\",\n      \"versions\": [\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        },\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        }\n      ],\n      \"supportId\": \"string\",\n      \"license\": \"string\",\n      \"supersededByVersion\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"PURL\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        }\n      ],\n      \"eventId\": 1876,\n      \"reason\": \"string\",\n      \"description\": \"string\",\n      \"references\": [\n        \"http://qQLeSCYIPtLunuaiLMsxNdnpRwYPGz.sjiwbz\",\n        \"http://RSioBDvfmnbCZjHLswVgDwM.qghtC-z9EX5-\"\n      ]\n    },\n    {\n      \"id\": 8980,\n      \"type\": \"released\",\n      \"effective\": \"2001-01-23T21:11:30.442Z\",\n      \"published\": \"1964-10-30T10:48:58.731Z\",\n      \"version\": \"string\",\n      \"versions\": [\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        },\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        }\n      ],\n      \"supportId\": \"string\",\n      \"license\": \"string\",\n      \"supersededByVersion\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        }\n      ],\n      \"eventId\": 5746,\n      \"reason\": \"string\",\n      \"description\": \"string\",\n      \"references\": [\n        \"https://uBNBdJHUJeLIMdFQuGXFrH.jxZeT7Rq0yNdgBKV6X2b2nOsnRl4pD6A-Zl1w,h,uKGi\",\n        \"https://dluShQrdFqQSVdDHIA.vhsce2VyXQoB+mBBcpGj\"\n      ]\n    }\n  ],\n  \"definitions\": {\n    \"type\": \"object\",\n    \"description\": \"Container for reusable CLE policy definitions\",\n    \"properties\": {\n      \"support\": {\n        \"type\": \"array\",\n        \"description\": \"List of support policies\",\n        \"items\": {\n          \"type\": \"object\",\n          \"description\": \"A support policy definition from CLE\",\n          \"properties\": {\n            \"id\": {\n              \"type\": \"string\",\n              \"description\": \"Unique identifier for the support policy\"\n            },\n            \"description\": {\n              \"type\": \"string\",\n              \"description\": \"Human-readable description of the policy\"\n            },\n            \"url\": {\n              \"type\": \"string\",\n              \"format\": \"uri\",\n              \"description\": \"URL to detailed documentation about this support policy\"\n            }\n          },\n          \"required\": [\n            \"id\",\n            \"description\"\n          ],\n          \"examples\": [\n            {\n              \"id\": \"http://json-schema.org/standard#\",\n              \"description\": \"Standard product support policy\",\n              \"url\": \"https://example.com/support/standard\"\n            }\n          ]\n        }\n      }\n    }\n  }\n}"
+                    },
+                    {
+                      "name": "Object requested by identifier not found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/component/:uuid/cle",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "component",
+                            ":uuid",
+                            "cle"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Component in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "get Tea Component By Id",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/component/:uuid",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "component",
+                    ":uuid"
+                  ],
+                  "variable": [
+                    {
+                      "key": "uuid",
+                      "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                      "description": "UUID of TEA Component in the TEA server"
+                    }
+                  ]
+                },
+                "description": "Get a TEA Component"
+              },
+              "response": [
+                {
+                  "name": "Requested TEA Component found and returned",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/component/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "component",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Component in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"uuid\": \"416534cd-5459-b9c6-4acd-fe33d78977ee\",\n  \"name\": \"string\",\n  \"identifiers\": [\n    {\n      \"idType\": \"TEI\",\n      \"idValue\": \"string\"\n    },\n    {\n      \"idType\": \"CPE\",\n      \"idValue\": \"string\"\n    }\n  ]\n}"
+                },
+                {
+                  "name": "Object requested by identifier not found",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/component/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "component",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Component in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "componentRelease",
+      "item": [
+        {
+          "name": "{uuid}",
+          "item": [
+            {
+              "name": "cle",
+              "item": [
+                {
+                  "name": "get Cle By Component Release Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/componentRelease/:uuid/cle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "componentRelease",
+                        ":uuid",
+                        "cle"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Component Release in the TEA server"
+                        }
+                      ]
+                    },
+                    "description": "Get the CLE (Common Lifecycle Enumeration) data for a TEA Component Release"
+                  },
+                  "response": [
+                    {
+                      "name": "CLE data for the requested TEA Component Release found and returned",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/componentRelease/:uuid/cle",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "componentRelease",
+                            ":uuid",
+                            "cle"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Component Release in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"events\": [\n    {\n      \"id\": 5208,\n      \"type\": \"withdrawn\",\n      \"effective\": \"2020-09-18T19:15:31.265Z\",\n      \"published\": \"1981-11-15T04:09:21.277Z\",\n      \"version\": \"string\",\n      \"versions\": [\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        },\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        }\n      ],\n      \"supportId\": \"string\",\n      \"license\": \"string\",\n      \"supersededByVersion\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"PURL\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        }\n      ],\n      \"eventId\": 1876,\n      \"reason\": \"string\",\n      \"description\": \"string\",\n      \"references\": [\n        \"http://qQLeSCYIPtLunuaiLMsxNdnpRwYPGz.sjiwbz\",\n        \"http://RSioBDvfmnbCZjHLswVgDwM.qghtC-z9EX5-\"\n      ]\n    },\n    {\n      \"id\": 8980,\n      \"type\": \"released\",\n      \"effective\": \"2001-01-23T21:11:30.442Z\",\n      \"published\": \"1964-10-30T10:48:58.731Z\",\n      \"version\": \"string\",\n      \"versions\": [\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        },\n        {\n          \"version\": \"string\",\n          \"range\": \"string\"\n        }\n      ],\n      \"supportId\": \"string\",\n      \"license\": \"string\",\n      \"supersededByVersion\": \"string\",\n      \"identifiers\": [\n        {\n          \"idType\": \"CPE\",\n          \"idValue\": \"string\"\n        },\n        {\n          \"idType\": \"TEI\",\n          \"idValue\": \"string\"\n        }\n      ],\n      \"eventId\": 5746,\n      \"reason\": \"string\",\n      \"description\": \"string\",\n      \"references\": [\n        \"https://uBNBdJHUJeLIMdFQuGXFrH.jxZeT7Rq0yNdgBKV6X2b2nOsnRl4pD6A-Zl1w,h,uKGi\",\n        \"https://dluShQrdFqQSVdDHIA.vhsce2VyXQoB+mBBcpGj\"\n      ]\n    }\n  ],\n  \"definitions\": {\n    \"type\": \"object\",\n    \"description\": \"Container for reusable CLE policy definitions\",\n    \"properties\": {\n      \"support\": {\n        \"type\": \"array\",\n        \"description\": \"List of support policies\",\n        \"items\": {\n          \"type\": \"object\",\n          \"description\": \"A support policy definition from CLE\",\n          \"properties\": {\n            \"id\": {\n              \"type\": \"string\",\n              \"description\": \"Unique identifier for the support policy\"\n            },\n            \"description\": {\n              \"type\": \"string\",\n              \"description\": \"Human-readable description of the policy\"\n            },\n            \"url\": {\n              \"type\": \"string\",\n              \"format\": \"uri\",\n              \"description\": \"URL to detailed documentation about this support policy\"\n            }\n          },\n          \"required\": [\n            \"id\",\n            \"description\"\n          ],\n          \"examples\": [\n            {\n              \"id\": \"http://json-schema.org/standard#\",\n              \"description\": \"Standard product support policy\",\n              \"url\": \"https://example.com/support/standard\"\n            }\n          ]\n        }\n      }\n    }\n  }\n}"
+                    },
+                    {
+                      "name": "Object requested by identifier not found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/componentRelease/:uuid/cle",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "componentRelease",
+                            ":uuid",
+                            "cle"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Component Release in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "collection",
+              "item": [
+                {
+                  "name": "latest",
+                  "item": [
+                    {
+                      "name": "get Latest Collection",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/componentRelease/:uuid/collection/latest",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "componentRelease",
+                            ":uuid",
+                            "collection",
+                            "latest"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Component Release in the TEA server"
+                            }
+                          ]
+                        },
+                        "description": "Get the latest TEA Collection belonging to the TEA Component Release"
+                      },
+                      "response": [
+                        {
+                          "name": "Requested TEA Collection found and returned",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/componentRelease/:uuid/collection/latest",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "componentRelease",
+                                ":uuid",
+                                "collection",
+                                "latest"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "uuid",
+                                  "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                                  "description": "UUID of TEA Component Release in the TEA server"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"uuid\": \"41ea7c4e-7196-191c-e425-fa851cc89d6f\",\n  \"version\": 199,\n  \"date\": \"2024-03-20T15:30:00Z\",\n  \"belongsTo\": \"PRODUCT_RELEASE\",\n  \"updateReason\": {\n    \"type\": \"ARTIFACT_UPDATED\",\n    \"comment\": \"string\"\n  },\n  \"artifacts\": [\n    {\n      \"uuid\": \"43891fb8-68ba-fa56-eb65-7c0d845250cc\",\n      \"type\": \"OTHER\",\n      \"formats\": [\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"BLAKE2b-512\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA-1\",\n              \"algValue\": \"string\"\n            }\n          ]\n        },\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"SHA-1\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"BLAKE2b-384\",\n              \"algValue\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"name\": \"string\",\n      \"distributionIds\": [\n        \"bcaf8fba-4243-9333-8101-700fdf069a10\",\n        \"29539118-4881-ceb2-410e-11e6f2590d6d\"\n      ]\n    },\n    {\n      \"uuid\": \"94049c89-0ab4-84c0-5805-fa9d60166725\",\n      \"type\": \"FORMULATION\",\n      \"formats\": [\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"BLAKE2b-384\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA-384\",\n              \"algValue\": \"string\"\n            }\n          ]\n        },\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"SHA-512\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA3-256\",\n              \"algValue\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"name\": \"string\",\n      \"distributionIds\": [\n        \"47d90f01-1c93-e015-39c8-e8bddddbcf84\",\n        \"6ba5f3e9-a247-f596-9092-b7492a94935d\"\n      ]\n    }\n  ]\n}"
+                        },
+                        {
+                          "name": "Object requested by identifier not found",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/componentRelease/:uuid/collection/latest",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "componentRelease",
+                                ":uuid",
+                                "collection",
+                                "latest"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "uuid",
+                                  "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                                  "description": "UUID of TEA Component Release in the TEA server"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "{collectionVersion}",
+                  "item": [
+                    {
+                      "name": "get Collection",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/componentRelease/:uuid/collection/:collectionVersion",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "componentRelease",
+                            ":uuid",
+                            "collection",
+                            ":collectionVersion"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Collection in the TEA server"
+                            },
+                            {
+                              "key": "collectionVersion",
+                              "value": "3532",
+                              "description": "Version of TEA Collection"
+                            }
+                          ]
+                        },
+                        "description": "Get a specific Collection (by version) for a TEA Component Release by its UUID"
+                      },
+                      "response": [
+                        {
+                          "name": "Requested TEA Collection Version found and returned",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/componentRelease/:uuid/collection/:collectionVersion",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "componentRelease",
+                                ":uuid",
+                                "collection",
+                                ":collectionVersion"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "uuid",
+                                  "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                                  "description": "UUID of TEA Collection in the TEA server"
+                                },
+                                {
+                                  "key": "collectionVersion",
+                                  "value": "3532",
+                                  "description": "Version of TEA Collection"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"uuid\": \"41ea7c4e-7196-191c-e425-fa851cc89d6f\",\n  \"version\": 199,\n  \"date\": \"2024-03-20T15:30:00Z\",\n  \"belongsTo\": \"PRODUCT_RELEASE\",\n  \"updateReason\": {\n    \"type\": \"ARTIFACT_UPDATED\",\n    \"comment\": \"string\"\n  },\n  \"artifacts\": [\n    {\n      \"uuid\": \"43891fb8-68ba-fa56-eb65-7c0d845250cc\",\n      \"type\": \"OTHER\",\n      \"formats\": [\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"BLAKE2b-512\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA-1\",\n              \"algValue\": \"string\"\n            }\n          ]\n        },\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"SHA-1\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"BLAKE2b-384\",\n              \"algValue\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"name\": \"string\",\n      \"distributionIds\": [\n        \"bcaf8fba-4243-9333-8101-700fdf069a10\",\n        \"29539118-4881-ceb2-410e-11e6f2590d6d\"\n      ]\n    },\n    {\n      \"uuid\": \"94049c89-0ab4-84c0-5805-fa9d60166725\",\n      \"type\": \"FORMULATION\",\n      \"formats\": [\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"BLAKE2b-384\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA-384\",\n              \"algValue\": \"string\"\n            }\n          ]\n        },\n        {\n          \"mediaType\": \"string\",\n          \"description\": \"string\",\n          \"url\": \"string\",\n          \"signatureUrl\": \"string\",\n          \"checksums\": [\n            {\n              \"algType\": \"SHA-512\",\n              \"algValue\": \"string\"\n            },\n            {\n              \"algType\": \"SHA3-256\",\n              \"algValue\": \"string\"\n            }\n          ]\n        }\n      ],\n      \"name\": \"string\",\n      \"distributionIds\": [\n        \"47d90f01-1c93-e015-39c8-e8bddddbcf84\",\n        \"6ba5f3e9-a247-f596-9092-b7492a94935d\"\n      ]\n    }\n  ]\n}"
+                        },
+                        {
+                          "name": "Object requested by identifier not found",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/componentRelease/:uuid/collection/:collectionVersion",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "componentRelease",
+                                ":uuid",
+                                "collection",
+                                ":collectionVersion"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "uuid",
+                                  "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                                  "description": "UUID of TEA Collection in the TEA server"
+                                },
+                                {
+                                  "key": "collectionVersion",
+                                  "value": "3532",
+                                  "description": "Version of TEA Collection"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "collections",
+              "item": [
+                {
+                  "name": "get Collections By Release Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/componentRelease/:uuid/collections",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "componentRelease",
+                        ":uuid",
+                        "collections"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Component Release in the TEA server"
+                        }
+                      ]
+                    },
+                    "description": "Get the TEA Collections belonging to the TEA Component Release"
+                  },
+                  "response": [
+                    {
+                      "name": "Requested TEA Collection found and returned",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/componentRelease/:uuid/collections",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "componentRelease",
+                            ":uuid",
+                            "collections"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Component Release in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"uuid\": \"66331f1c-c6b4-5273-06a6-094b5fdaf849\",\n    \"version\": 8302,\n    \"date\": \"2024-03-20T15:30:00Z\",\n    \"belongsTo\": \"PRODUCT_RELEASE\",\n    \"updateReason\": {\n      \"type\": \"INITIAL_RELEASE\",\n      \"comment\": \"string\"\n    },\n    \"artifacts\": [\n      {\n        \"uuid\": \"4d9edfc9-afe0-4fe1-2c75-3fffae077cb9\",\n        \"type\": \"SECURITY_TXT\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-256\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE2b-256\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-384\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"SHA-1\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"d401f84e-4417-3bab-11ee-64d4cde2fc1f\",\n          \"16797af6-1a11-8cb2-fbc8-61c0adbfe3ad\"\n        ]\n      },\n      {\n        \"uuid\": \"4f73ed0b-982e-a09f-7bf7-77937ca162dc\",\n        \"type\": \"FORMULATION\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA3-512\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"SHA-384\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-384\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE3\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"25ffac8d-892b-6b69-937b-4543130ebc6d\",\n          \"d1b1f565-9a21-60e2-67ef-67cc530fc944\"\n        ]\n      }\n    ]\n  },\n  {\n    \"uuid\": \"18db2273-15f2-ddad-0a15-b81f648dac10\",\n    \"version\": 9545,\n    \"date\": \"2024-03-20T15:30:00Z\",\n    \"belongsTo\": \"PRODUCT_RELEASE\",\n    \"updateReason\": {\n      \"type\": \"INITIAL_RELEASE\",\n      \"comment\": \"string\"\n    },\n    \"artifacts\": [\n      {\n        \"uuid\": \"14e08fc8-0422-ce3e-f2fd-fd3250299cfa\",\n        \"type\": \"BOM\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA3-384\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE2b-512\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-1\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"SHA-256\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"a451ee7c-60c9-74fb-f113-1f2ac5dfb7de\",\n          \"8e0997c0-f9bf-d534-2dcb-91b69b33cf01\"\n        ]\n      },\n      {\n        \"uuid\": \"6c9054c7-b661-de59-4a5a-bd6fb923769c\",\n        \"type\": \"CERTIFICATION\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-512\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"MD5\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-512\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE2b-384\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"99ccc079-9001-4d38-7f89-1d22a335e8eb\",\n          \"1867f231-5fbf-fa14-cc88-516559c9b27d\"\n        ]\n      }\n    ]\n  }\n]"
+                    },
+                    {
+                      "name": "Object requested by identifier not found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/componentRelease/:uuid/collections",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "componentRelease",
+                            ":uuid",
+                            "collections"
+                          ],
+                          "variable": [
+                            {
+                              "key": "uuid",
+                              "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                              "description": "UUID of TEA Component Release in the TEA server"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "get Component Release By Id",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/componentRelease/:uuid",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "componentRelease",
+                    ":uuid"
+                  ],
+                  "variable": [
+                    {
+                      "key": "uuid",
+                      "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                      "description": "UUID of TEA Component Release in the TEA server"
+                    }
+                  ]
+                },
+                "description": "Get the TEA Component Release with its latest collection"
+              },
+              "response": [
+                {
+                  "name": "Requested TEA Component Release and its latest Collection found and returned",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/componentRelease/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "componentRelease",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Component Release in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"release\": {\n    \"uuid\": \"21f832e3-5db0-5eaf-c563-d0889bbe636e\",\n    \"version\": \"1.2.3\",\n    \"createdDate\": \"2024-03-20T15:30:00Z\",\n    \"component\": \"d0c80964-f03f-701f-05cc-ca54a4feeb8c\",\n    \"componentName\": \"tomcat\",\n    \"releaseDate\": \"2024-03-20T15:30:00Z\",\n    \"preRelease\": false,\n    \"identifiers\": [\n      {\n        \"idType\": \"CPE\",\n        \"idValue\": \"string\"\n      },\n      {\n        \"idType\": \"TEI\",\n        \"idValue\": \"string\"\n      }\n    ],\n    \"distributions\": [\n      {\n        \"distributionId\": \"5e60b74c-2a82-2de2-b5f9-d74cc4dc7bad\",\n        \"description\": \"string\",\n        \"identifiers\": [\n          {\n            \"idType\": \"PURL\",\n            \"idValue\": \"string\"\n          },\n          {\n            \"idType\": \"TEI\",\n            \"idValue\": \"string\"\n          }\n        ],\n        \"url\": \"string\",\n        \"signatureUrl\": \"string\",\n        \"checksums\": [\n          {\n            \"algType\": \"SHA-384\",\n            \"algValue\": \"string\"\n          },\n          {\n            \"algType\": \"SHA3-384\",\n            \"algValue\": \"string\"\n          }\n        ]\n      },\n      {\n        \"distributionId\": \"4de9ed1c-86ed-d409-1b00-faba10544de0\",\n        \"description\": \"string\",\n        \"identifiers\": [\n          {\n            \"idType\": \"PURL\",\n            \"idValue\": \"string\"\n          },\n          {\n            \"idType\": \"CPE\",\n            \"idValue\": \"string\"\n          }\n        ],\n        \"url\": \"string\",\n        \"signatureUrl\": \"string\",\n        \"checksums\": [\n          {\n            \"algType\": \"SHA3-384\",\n            \"algValue\": \"string\"\n          },\n          {\n            \"algType\": \"MD5\",\n            \"algValue\": \"string\"\n          }\n        ]\n      }\n    ]\n  },\n  \"latestCollection\": {\n    \"uuid\": \"c410ebc9-84c0-b7dd-4332-0215065a8098\",\n    \"version\": 523,\n    \"date\": \"2024-03-20T15:30:00Z\",\n    \"belongsTo\": \"COMPONENT_RELEASE\",\n    \"updateReason\": {\n      \"type\": \"INITIAL_RELEASE\",\n      \"comment\": \"string\"\n    },\n    \"artifacts\": [\n      {\n        \"uuid\": \"88f7b2ed-fa04-be44-202b-5c534521d348\",\n        \"type\": \"VULNERABILITIES\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"BLAKE2b-256\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"SHA-512\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"BLAKE2b-512\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE3\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"33880110-f87c-c4e7-a6a2-f94297746932\",\n          \"5bff73b6-43b2-91e0-5845-727169a5e844\"\n        ]\n      },\n      {\n        \"uuid\": \"48189da5-c366-fa14-3975-a9ad2d240923\",\n        \"type\": \"BOM\",\n        \"formats\": [\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA3-512\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"MD5\",\n                \"algValue\": \"string\"\n              }\n            ]\n          },\n          {\n            \"mediaType\": \"string\",\n            \"description\": \"string\",\n            \"url\": \"string\",\n            \"signatureUrl\": \"string\",\n            \"checksums\": [\n              {\n                \"algType\": \"SHA-1\",\n                \"algValue\": \"string\"\n              },\n              {\n                \"algType\": \"BLAKE2b-256\",\n                \"algValue\": \"string\"\n              }\n            ]\n          }\n        ],\n        \"name\": \"string\",\n        \"distributionIds\": [\n          \"a41b8b14-0100-cdb7-8eac-0d412a86ea84\",\n          \"12f5bc78-57e8-7436-9133-e5a2434530f8\"\n        ]\n      }\n    ]\n  }\n}"
+                },
+                {
+                  "name": "Object requested by identifier not found",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/componentRelease/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "componentRelease",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Component Release in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "artifact",
+      "item": [
+        {
+          "name": "{uuid}",
+          "item": [
+            {
+              "name": "get Artifact",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/artifact/:uuid",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "artifact",
+                    ":uuid"
+                  ],
+                  "variable": [
+                    {
+                      "key": "uuid",
+                      "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                      "description": "UUID of TEA Artifact in the TEA server"
+                    }
+                  ]
+                },
+                "description": "Get metadata for specific TEA Artifact"
+              },
+              "response": [
+                {
+                  "name": "Requested TEA Artifact metadata found and returned",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/artifact/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "artifact",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Artifact in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"uuid\": \"15a02a6b-9ada-ba63-7451-1f18535c566f\",\n  \"type\": \"SECURITY_TXT\",\n  \"formats\": [\n    {\n      \"mediaType\": \"string\",\n      \"description\": \"string\",\n      \"url\": \"string\",\n      \"signatureUrl\": \"string\",\n      \"checksums\": [\n        {\n          \"algType\": \"BLAKE3\",\n          \"algValue\": \"string\"\n        },\n        {\n          \"algType\": \"BLAKE2b-256\",\n          \"algValue\": \"string\"\n        }\n      ]\n    },\n    {\n      \"mediaType\": \"string\",\n      \"description\": \"string\",\n      \"url\": \"string\",\n      \"signatureUrl\": \"string\",\n      \"checksums\": [\n        {\n          \"algType\": \"BLAKE2b-512\",\n          \"algValue\": \"string\"\n        },\n        {\n          \"algType\": \"BLAKE2b-512\",\n          \"algValue\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"name\": \"string\",\n  \"distributionIds\": [\n    \"e3b41981-5402-91d3-7026-794f8a3bd04d\",\n    \"77a05448-995d-eb0b-c3e9-15a073fab7e1\"\n  ]\n}"
+                },
+                {
+                  "name": "Object requested by identifier not found",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/artifact/:uuid",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "artifact",
+                        ":uuid"
+                      ],
+                      "variable": [
+                        {
+                          "key": "uuid",
+                          "value": "d507e226-fcc4-8e71-3975-2e0be9cd9014",
+                          "description": "UUID of TEA Artifact in the TEA server"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "discovery",
+      "item": [
+        {
+          "name": "discovery By Tei",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/discovery?tei=urn%3Atei%3Auuid%3Aproducts.example.com%3Ad4d9f54a-abcf-11ee-ac79-1a52914d44b",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "discovery"
+              ],
+              "query": [
+                {
+                  "key": "tei",
+                  "value": "urn%3Atei%3Auuid%3Aproducts.example.com%3Ad4d9f54a-abcf-11ee-ac79-1a52914d44b",
+                  "description": "Transparency Exchange Identifier (TEI) for the product being discovered. Provide the TEI as a URL-encoded string per RFC 3986, RFC 3987."
+                }
+              ]
+            },
+            "description": "Discovery endpoint which resolves TEI into product release UUID."
+          },
+          "response": [
+            {
+              "name": "Discovery information for the requested TEI",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/discovery?tei=urn%3Atei%3Auuid%3Aproducts.example.com%3Ad4d9f54a-abcf-11ee-ac79-1a52914d44b",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "discovery"
+                  ],
+                  "query": [
+                    {
+                      "description": "Transparency Exchange Identifier (TEI) for the product being discovered. Provide the TEI as a URL-encoded string per RFC 3986, RFC 3987.",
+                      "key": "tei",
+                      "value": "urn%3Atei%3Auuid%3Aproducts.example.com%3Ad4d9f54a-abcf-11ee-ac79-1a52914d44b"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"productReleaseUuid\": \"8a87594b-3383-de26-6350-338aec6a145a\",\n    \"servers\": [\n      {\n        \"rootUrl\": \"https://api.teaexample.com\",\n        \"versions\": [\n          \"0.2.0-beta.2\",\n          \"1.0.0\"\n        ],\n        \"priority\": 0.8\n      }\n    ]\n  },\n  {\n    \"productReleaseUuid\": \"6ecd709c-ac0d-47f1-b428-b29b03ab8daf\",\n    \"servers\": [\n      {\n        \"rootUrl\": \"https://api.teaexample.com\",\n        \"versions\": [\n          \"0.2.0-beta.2\",\n          \"1.0.0\"\n        ],\n        \"priority\": 0.8\n      }\n    ]\n  }\n]"
+            },
+            {
+              "name": "Object requested by identifier not found",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/discovery?tei=urn%3Atei%3Auuid%3Aproducts.example.com%3Ad4d9f54a-abcf-11ee-ac79-1a52914d44b",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "discovery"
+                  ],
+                  "query": [
+                    {
+                      "description": "Transparency Exchange Identifier (TEI) for the product being discovered. Provide the TEI as a URL-encoded string per RFC 3986, RFC 3987.",
+                      "key": "tei",
+                      "value": "urn%3Atei%3Auuid%3Aproducts.example.com%3Ad4d9f54a-abcf-11ee-ac79-1a52914d44b"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"OBJECT_NOT_SHAREABLE\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost/tea/v1"
+    }
+  ]
+}
